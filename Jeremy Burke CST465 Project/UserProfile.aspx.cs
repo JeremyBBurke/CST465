@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using Jeremy_Burke_CST465_Project.code;
 
 namespace Jeremy_Burke_CST465_Project
 {
@@ -12,7 +13,32 @@ namespace Jeremy_Burke_CST465_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if ( Session["ProfileData"] != null)
+            {
+                string base64String = null;
+                UserProfileObject SavedProfile = (UserProfileObject) Session["ProfileData"];
+                MultiView1.ActiveViewIndex = 1;
+                litFirstName.Text = SavedProfile.FirstName;
+                litLastName.Text = SavedProfile.LastName;
+                litAge.Text = SavedProfile.Age;
+                litPhoneNumber.Text = SavedProfile.PhoneNumber;
+                litEmailAddress.Text = SavedProfile.EmailAddress;
+                litConfirmEmail.Text = SavedProfile.ConfrimEmail;
+                litStreetAddress.Text = SavedProfile.StreetAddress;
+                litCity.Text = SavedProfile.City;
+                litState.Text = SavedProfile.State;
+                litZipCode.Text = SavedProfile.Zip;
+                using (MemoryStream m = new MemoryStream(SavedProfile.profileimage))
+                {
+                    byte[] imageBytes = m.ToArray();
+                    // Convert byte[] to Base64 String                    
+                    base64String = Convert.ToBase64String(imageBytes);
+                }
+                if (!string.IsNullOrEmpty(base64String))
+                {
+                    uxImage.ImageUrl = "data:image/jpeg;base64," + base64String;
+                }
+            }
         }
         protected void validateFile(object sender, ServerValidateEventArgs e)
         {
@@ -34,33 +60,25 @@ namespace Jeremy_Burke_CST465_Project
         {
             if (Page.IsValid)
             {
-                MultiView1.ActiveViewIndex = 1;
-                litFirstName.Text = uxFirstName.Text;
-                litLastName.Text = uxLastName.Text;
-                litAge.Text = uxAge.Text;
-                litPhoneNumber.Text = uxPhonenumber.Text;
-                litEmailAddress.Text = uxEmailAddress.Text;
-                litConfirmEmail.Text = uxConfirmEmail.Text;
-                litStreetAddress.Text = uxStreetAddress.Text;
-                litCity.Text = uxCity.Text;
-                litState.Text = uxState.Text;
-                litZipCode.Text = uxZipcode.Text;
+                UserProfileObject myprofile = new UserProfileObject();
+                myprofile.FirstName = uxFirstName.Text;
+                myprofile.LastName = uxLastName.Text;
+                myprofile.Age = uxAge.Text;
+                myprofile.PhoneNumber = uxPhonenumber.Text;
+                myprofile.EmailAddress = uxEmailAddress.Text;
+                myprofile.ConfrimEmail = uxConfirmEmail.Text;
+                myprofile.StreetAddress = uxStreetAddress.Text;
+                myprofile.City = uxCity.Text;
+                myprofile.State = uxState.Text;
+                myprofile.Zip = uxZipcode.Text;
                 if (uxImageUpload.HasFile)
                 {
-                    string base64String = null;
                     byte[] buffer = new byte[uxImageUpload.PostedFile.ContentLength];
                     uxImageUpload.PostedFile.InputStream.Read(buffer, 0, uxImageUpload.PostedFile.ContentLength);
-                    using (MemoryStream m = new MemoryStream(buffer))
-                    {
-                        byte[] imageBytes = m.ToArray();
-                        // Convert byte[] to Base64 String                    
-                        base64String = Convert.ToBase64String(imageBytes);
-                    }
-                    if (!string.IsNullOrEmpty(base64String))
-                    {
-                        uxImage.ImageUrl = "data:image/jpeg;base64," + base64String;
-                    }
+                    myprofile.profileimage = buffer;
                 }
+                Session["ProfileData"] = myprofile;
+                Response.Redirect("UserProfile.aspx");
             }
         }
     }
