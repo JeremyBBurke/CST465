@@ -68,7 +68,9 @@
   <ItemGroup>
     <Content Include="404Error.aspx" />
     <Content Include="500Error.aspx" />
+    <None Include="css\DefaultStyles.css" />
     <Content Include="packages.config" />
+    <Content Include="App_Master\BaseTemplate.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -79,6 +81,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="UserProfile.aspx" />
+    <Content Include="UserProfileWithMaster.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
   </ItemGroup>
@@ -97,7 +100,14 @@
     <Compile Include="500Error.aspx.designer.cs">
       <DependentUpon>500Error.aspx</DependentUpon>
     </Compile>
-    <Compile Include="code\UserProfile.cs" />
+    <Compile Include="App_Master\BaseTemplate.Master.cs">
+      <DependentUpon>BaseTemplate.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="App_Master\BaseTemplate.Master.designer.cs">
+      <DependentUpon>BaseTemplate.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Code\UserProfile.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -109,6 +119,13 @@
     <Compile Include="UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
     </Compile>
+    <Compile Include="UserProfileWithMaster.aspx.cs">
+      <DependentUpon>UserProfileWithMaster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserProfileWithMaster.aspx.designer.cs">
+      <DependentUpon>UserProfileWithMaster.aspx</DependentUpon>
+    </Compile>
     <Compile Include="WebForm1.aspx.cs">
       <DependentUpon>WebForm1.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -119,6 +136,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="img\" />
+    <Folder Include="js\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
