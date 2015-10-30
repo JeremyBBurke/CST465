@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 
-namespace Jeremy_Burke_CST465_Project.code
+namespace Jeremy_Burke_CST465_Project.Code
 {
     public class UserProfileObject
     {

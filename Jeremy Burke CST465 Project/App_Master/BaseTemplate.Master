@@ -1,0 +1,27 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="BaseTemplate.master.cs" Inherits="Jeremy_Burke_CST465_Project.App_Master.BaseTemplate" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="~/css/DefaultStyles.css" />
+    <asp:ContentPlaceHolder ID="cphHead" runat="server"><title>This is a Page!</title></asp:ContentPlaceHolder>
+</head>
+<body>
+    <header>
+        <asp:ContentPlaceHolder ID="cphHeader" runat="server">This is the Header!</asp:ContentPlaceHolder>
+    </header>
+
+    <nav>
+        <asp:ContentPlaceHolder ID="cphNav" runat="server">This is the navigation pane!</asp:ContentPlaceHolder>
+    </nav>
+
+    <main>
+        <asp:ContentPlaceHolder ID="cphMain" runat="server"><h1>This is the Main!</h1></asp:ContentPlaceHolder>
+    </main>
+
+    <footer>
+        <asp:ContentPlaceHolder ID="cphFooter" runat="server">This is the Footer!</asp:ContentPlaceHolder>
+    </footer>
+</body>
+</html>

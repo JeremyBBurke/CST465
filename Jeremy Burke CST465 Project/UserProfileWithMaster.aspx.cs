@@ -9,14 +9,14 @@ using Jeremy_Burke_CST465_Project.Code;
 
 namespace Jeremy_Burke_CST465_Project
 {
-    public partial class UserProfile : System.Web.UI.Page
+    public partial class UserProfileWithMaster : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if ( Session["ProfileData"] != null)
+            if (Session["ProfileData"] != null)
             {
                 string base64String = null;
-                UserProfileObject SavedProfile = (UserProfileObject) Session["ProfileData"];
+                UserProfileObject SavedProfile = (UserProfileObject)Session["ProfileData"];
                 MultiView1.ActiveViewIndex = 1;
                 litFirstName.Text = SavedProfile.FirstName;
                 litLastName.Text = SavedProfile.LastName;
@@ -42,7 +42,7 @@ namespace Jeremy_Burke_CST465_Project
         }
         protected void validateFile(object sender, ServerValidateEventArgs e)
         {
-            if(uxImageUpload.HasFile)
+            if (uxImageUpload.HasFile)
             {
                 if (Path.GetExtension(uxImageUpload.FileName).ToLower() != ".jpg"
                     && Path.GetExtension(uxImageUpload.FileName).ToLower() != ".png"
