@@ -15,4 +15,21 @@ footer{
     background-color:#9D0E0E ;
     border-color:#FB7979
 }
+.Label{
+    width: 10%;
+    display:inline-block;
+}
+.textbox{
+    display:inline-block;
+}
+.DropDown{
+    display:inline-block;
+}
+.FileUpload{
+    display:inline-block;
+}
+main div{
+    margin:auto;
+    width:1004px;
+}
 /* http://paletton.com/#uid=51q1q0kq1o2gAvzlsrkt3jF-sex */

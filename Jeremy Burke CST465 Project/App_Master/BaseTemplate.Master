@@ -4,6 +4,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
+    <title></title>
     <link rel="stylesheet" type="text/css" href="~/css/DefaultStyles.css" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server"><title>This is a Page!</title></asp:ContentPlaceHolder>
 </head>
@@ -17,7 +18,9 @@
     </nav>
 
     <main>
-        <asp:ContentPlaceHolder ID="cphMain" runat="server"><h1>This is the Main!</h1></asp:ContentPlaceHolder>
+        <div id="MasterMainDiv">
+            <asp:ContentPlaceHolder ID="cphMain" runat="server"><h1>This is the Main!</h1></asp:ContentPlaceHolder>
+        </div>
     </main>
 
     <footer>
