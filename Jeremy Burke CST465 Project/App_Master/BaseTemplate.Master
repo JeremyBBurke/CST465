@@ -15,7 +15,7 @@
     </header>
 
     <div>
-        <asp:LoginStatus ID="LoginStatus" runat="server" LogoutPageUrl="~/Customers/Login.aspx"/>
+        <asp:LoginStatus ID="LoginStatus" runat="server" CssClass="LoginControl" LogoutPageUrl="~/Customers/Login.aspx"/>
     </div>
     <nav>
         <asp:ContentPlaceHolder ID="cphNav" runat="server">This is the navigation pane!</asp:ContentPlaceHolder>

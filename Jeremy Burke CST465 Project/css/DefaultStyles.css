@@ -16,7 +16,7 @@ footer{
     border-color:#FB7979
 }
 .Label{
-    width: 10%;
+    width: 15%;
     display:inline-block;
 }
 .textbox{
@@ -32,7 +32,7 @@ main div{
     margin:auto;
     width:1004px;
 }
-body div{
+.LoginControl{
     position:absolute;
     top: 0;
     right:0;
