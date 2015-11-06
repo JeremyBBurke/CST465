@@ -8,10 +8,14 @@
     <asp:ContentPlaceHolder ID="cphHead" runat="server"><title>This is a Page!</title></asp:ContentPlaceHolder>
 </head>
 <body>
+    <form id="masterform" runat="server">
     <header>
         <asp:ContentPlaceHolder ID="cphHeader" runat="server">This is the Header!</asp:ContentPlaceHolder>
     </header>
 
+    <div>
+        <asp:LoginStatus ID="LoginStatus" runat="server" LogoutPageUrl="~/Customers/Login.aspx"/>
+    </div>
     <nav>
         <asp:ContentPlaceHolder ID="cphNav" runat="server">This is the navigation pane!</asp:ContentPlaceHolder>
     </nav>
@@ -23,5 +27,6 @@
     <footer>
         <asp:ContentPlaceHolder ID="cphFooter" runat="server">This is the Footer!</asp:ContentPlaceHolder>
     </footer>
+    </form>
 </body>
 </html>

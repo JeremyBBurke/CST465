@@ -22,6 +22,15 @@ namespace Jeremy_Burke_CST465_Project.App_Master {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
         
         /// <summary>
+        /// masterform control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlForm masterform;
+        
+        /// <summary>
         /// cphHeader control.
         /// </summary>
         /// <remarks>
@@ -29,6 +38,15 @@ namespace Jeremy_Burke_CST465_Project.App_Master {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHeader;
+        
+        /// <summary>
+        /// LoginStatus control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.LoginStatus LoginStatus;
         
         /// <summary>
         /// cphNav control.
