@@ -69,6 +69,7 @@
     <Content Include="404Error.aspx" />
     <Content Include="500Error.aspx" />
     <None Include="css\DefaultStyles.css" />
+    <Content Include="Admin\UserManagement.aspx" />
     <Content Include="Assignment4Test.aspx" />
     <Content Include="EssayQuestion.ascx" />
     <Content Include="MultipleChoiceQuestion.ascx" />
@@ -105,6 +106,13 @@
     </Compile>
     <Compile Include="500Error.aspx.designer.cs">
       <DependentUpon>500Error.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UserManagement.aspx.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\UserManagement.aspx.designer.cs">
+      <DependentUpon>UserManagement.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Master\BaseTemplate.Master.cs">
       <DependentUpon>BaseTemplate.Master</DependentUpon>
