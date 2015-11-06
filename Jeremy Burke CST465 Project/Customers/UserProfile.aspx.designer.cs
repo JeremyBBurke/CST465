@@ -49,15 +49,6 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.Label lblFirstName;
         
         /// <summary>
-        /// rfvFirstName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstName;
-        
-        /// <summary>
         /// uxFirstName control.
         /// </summary>
         /// <remarks>
@@ -65,6 +56,15 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox uxFirstName;
+        
+        /// <summary>
+        /// rfvFirstName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvFirstName;
         
         /// <summary>
         /// lblLastName control.
@@ -76,15 +76,6 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.Label lblLastName;
         
         /// <summary>
-        /// rfvLastName control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLastName;
-        
-        /// <summary>
         /// uxLastName control.
         /// </summary>
         /// <remarks>
@@ -94,6 +85,15 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.TextBox uxLastName;
         
         /// <summary>
+        /// rfvLastName control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvLastName;
+        
+        /// <summary>
         /// lblAge control.
         /// </summary>
         /// <remarks>
@@ -101,6 +101,15 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblAge;
+        
+        /// <summary>
+        /// uxAge control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uxAge;
         
         /// <summary>
         /// rfvAge control.
@@ -121,15 +130,6 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.RangeValidator ranAge;
         
         /// <summary>
-        /// uxAge control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uxAge;
-        
-        /// <summary>
         /// lblPhoneNumber control.
         /// </summary>
         /// <remarks>
@@ -137,15 +137,6 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblPhoneNumber;
-        
-        /// <summary>
-        /// rfvPhoneNumber control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhoneNumber;
         
         /// <summary>
         /// uxPhonenumber control.
@@ -157,6 +148,15 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.TextBox uxPhonenumber;
         
         /// <summary>
+        /// rfvPhoneNumber control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvPhoneNumber;
+        
+        /// <summary>
         /// lblEmailAddress control.
         /// </summary>
         /// <remarks>
@@ -164,15 +164,6 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblEmailAddress;
-        
-        /// <summary>
-        /// rfvEmailAddress control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailAddress;
         
         /// <summary>
         /// uxEmailAddress control.
@@ -184,6 +175,15 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.TextBox uxEmailAddress;
         
         /// <summary>
+        /// rfvEmailAddress control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RequiredFieldValidator rfvEmailAddress;
+        
+        /// <summary>
         /// lblConfirmEmail control.
         /// </summary>
         /// <remarks>
@@ -191,6 +191,15 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblConfirmEmail;
+        
+        /// <summary>
+        /// uxConfirmEmail control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox uxConfirmEmail;
         
         /// <summary>
         /// rfvConfirmEmail control.
@@ -209,15 +218,6 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CompareValidator cvEmail;
-        
-        /// <summary>
-        /// uxConfirmEmail control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox uxConfirmEmail;
         
         /// <summary>
         /// lblStreetAddress control.
@@ -283,15 +283,6 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.Label lblZipcode;
         
         /// <summary>
-        /// RegularExpressionValidator1 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
-        
-        /// <summary>
         /// uxZipcode control.
         /// </summary>
         /// <remarks>
@@ -299,6 +290,15 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox uxZipcode;
+        
+        /// <summary>
+        /// RegularExpressionValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RegularExpressionValidator RegularExpressionValidator1;
         
         /// <summary>
         /// lblImageUpload control.
@@ -310,15 +310,6 @@ namespace Jeremy_Burke_CST465_Project {
         protected global::System.Web.UI.WebControls.Label lblImageUpload;
         
         /// <summary>
-        /// cusvalImageUpload control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.CustomValidator cusvalImageUpload;
-        
-        /// <summary>
         /// uxImageUpload control.
         /// </summary>
         /// <remarks>
@@ -326,6 +317,15 @@ namespace Jeremy_Burke_CST465_Project {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.FileUpload uxImageUpload;
+        
+        /// <summary>
+        /// cusvalImageUpload control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CustomValidator cusvalImageUpload;
         
         /// <summary>
         /// uxSubmit control.

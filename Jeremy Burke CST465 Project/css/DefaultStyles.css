@@ -15,6 +15,23 @@ footer{
     background-color:#9D0E0E ;
     border-color:#FB7979
 }
+.Label{
+    width: 10%;
+    display:inline-block;
+}
+.textbox{
+    display:inline-block;
+}
+.DropDown{
+    display:inline-block;
+}
+.FileUpload{
+    display:inline-block;
+}
+main div{
+    margin:auto;
+    width:1004px;
+}
 body div{
     position:absolute;
     top: 0;
