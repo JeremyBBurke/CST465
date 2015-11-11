@@ -16,7 +16,6 @@
     </script>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphMain" runat="server">
-    <form id="form1" runat="server">
         <div>
             <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
                 <asp:View ID="View1" runat="server">
@@ -132,6 +131,5 @@
                 </asp:View>
             </asp:MultiView>
         </div>
-    </form>
 </asp:Content>
 

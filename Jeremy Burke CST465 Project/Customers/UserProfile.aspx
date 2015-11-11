@@ -1,9 +1,7 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserProfile.aspx.cs" Inherits="Jeremy_Burke_CST465_Project.UserProfile" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" MasterPageFile="~/App_Master/BaseTemplate.Master" CodeBehind="UserProfile.aspx.cs" Inherits="Jeremy_Burke_CST465_Project.UserProfile" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
+<asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="~/css/DefaultStyles.css" />
     <script type="text/javascript">
@@ -18,9 +16,8 @@
             }
         }
     </script>
-</head>
-<body>
-    <form id="form1" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphMain" runat="server">
         <div>
             <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
                 <asp:View ID="View1" runat="server">
@@ -136,6 +133,4 @@
                 </asp:View>
             </asp:MultiView>
         </div>
-    </form>
-</body>
-</html>
+</asp:Content>
