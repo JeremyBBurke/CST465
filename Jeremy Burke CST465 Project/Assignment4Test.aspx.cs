@@ -23,14 +23,14 @@ namespace Jeremy_Burke_CST465_Project
             {
                 if (childa is TextBox)
                 {
-                    mystrings.Append(uxShortText.Text).Append(" : ").Append(((TextBox)childa).Text).Append("<br />");
+                    mystrings.Append(uxShortText.QuestionText).Append(" : ").Append(((TextBox)childa).Text).Append("<br />");
                 }
             }
             foreach (Control childb in uxTF.Controls)
             {
                 if (childb is RadioButtonList)
                 {
-                    mystrings.Append(uxTF.Text).Append(" : ").Append(((RadioButtonList)childb).Text).Append("<br />");
+                    mystrings.Append(uxTF.QuestionText).Append(" : ").Append(((RadioButtonList)childb).Text).Append("<br />");
                 }
             }
             LitAnswers.Text = mystrings.ToString();

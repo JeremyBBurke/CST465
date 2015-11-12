@@ -12,13 +12,13 @@ namespace Jeremy_Burke_CST465_Project.Code
 {
     [DefaultProperty("Text")]
     [ToolboxData("<{0}:TrueFalseQuestion runat=server></{0}:TrueFalseQuestion>")]
-    public class TrueFalseQuestion : CompositeControl
+    public class TrueFalseQuestion : CompositeControl, ITestQuestion
     {
         [Bindable(true)]
         [Category("Appearance")]
         [DefaultValue("")]
         [Localizable(true)]
-        public string Text
+        public string QuestionText
         {
             get
             {
@@ -29,6 +29,25 @@ namespace Jeremy_Burke_CST465_Project.Code
             set
             {
                 ViewState["Text"] = value;
+            }
+        }
+        public string Answer
+        {
+            get
+            {
+                string temp="";
+                foreach (Control childb in this.Controls)
+                {
+                    if (childb is RadioButtonList)
+                    {
+                        temp = ((RadioButtonList)childb).Text;
+                    }
+                }
+                return temp;
+            }
+            set
+            {
+                string temp2 = value;
             }
         }
 
@@ -42,7 +61,7 @@ namespace Jeremy_Burke_CST465_Project.Code
             Label mylabel = new Label();
             mylabel.AssociatedControlID = "uxRadioTF";
             mylabel.ID = "lblRadioTF";
-            mylabel.Text = Text;
+            mylabel.Text = QuestionText;
             Controls.Add(mylabel);
             RadioButtonList myradiolist = new RadioButtonList();
             myradiolist.ID = "uxRadioTF";

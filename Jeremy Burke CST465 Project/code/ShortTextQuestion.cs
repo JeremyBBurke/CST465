@@ -12,13 +12,13 @@ namespace Jeremy_Burke_CST465_Project.Code
 {
     [DefaultProperty("Text")]
     [ToolboxData("<{0}:ShortTextQuestion runat=server></{0}:ShortTextQuestion>")]
-    public class ShortTextQuestion : CompositeControl
+    public class ShortTextQuestion : CompositeControl,ITestQuestion
     {
         [Bindable(true)]
         [Category("Appearance")]
         [DefaultValue("")]
         [Localizable(true)]
-        public string Text
+        public string QuestionText
         {
             get
             {
@@ -29,6 +29,25 @@ namespace Jeremy_Burke_CST465_Project.Code
             set
             {
                 ViewState["Text"] = value;
+            }
+        }
+        public string Answer
+        {
+            get
+            {
+                string temp = "";
+                foreach (Control childa in this.Controls)
+                {
+                    if (childa is TextBox)
+                    {
+                        temp = ((TextBox)childa).Text;
+                    }
+                }
+                return temp;
+            }
+            set
+            {
+                string temp2 = value;
             }
         }
 
@@ -42,7 +61,7 @@ namespace Jeremy_Burke_CST465_Project.Code
             Label mylabel = new Label();
             mylabel.AssociatedControlID = "uxAnswerBox";
             mylabel.ID = "lblAnswerBox";
-            mylabel.Text = Text;
+            mylabel.Text = QuestionText;
             Controls.Add(mylabel);
             TextBox mytextbox = new TextBox();
             mytextbox.ID = "uxAnswerBox";

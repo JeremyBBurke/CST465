@@ -70,8 +70,10 @@
     <Content Include="500Error.aspx" />
     <None Include="css\DefaultStyles.css" />
     <Content Include="Admin\UserManagement.aspx" />
+    <Content Include="Answers.html" />
     <Content Include="Assignment4Test.aspx" />
     <Content Include="EssayQuestion.ascx" />
+    <Content Include="MidtermExam.aspx" />
     <Content Include="MultipleChoiceQuestion.ascx" />
     <Content Include="Blog.aspx" />
     <Content Include="Customers\Login.aspx" />
@@ -88,6 +90,7 @@
   <ItemGroup>
     <Content Include="Global.asax" />
     <Content Include="Customers\UserProfile.aspx" />
+    <Content Include="Results.aspx" />
     <Content Include="UserProfileWithMaster.aspx" />
     <Content Include="Web.config" />
     <Content Include="WebForm1.aspx" />
@@ -136,6 +139,7 @@
     <Compile Include="Blog.aspx.designer.cs">
       <DependentUpon>Blog.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Code\QuestionAnswer.cs" />
     <Compile Include="Code\UserProfile.cs" />
     <Compile Include="Customers\Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
@@ -161,6 +165,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="MidtermExam.aspx.cs">
+      <DependentUpon>MidtermExam.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MidtermExam.aspx.designer.cs">
+      <DependentUpon>MidtermExam.aspx</DependentUpon>
+    </Compile>
     <Compile Include="MultipleChoiceQuestion.ascx.cs">
       <DependentUpon>MultipleChoiceQuestion.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -177,6 +188,13 @@
     </Compile>
     <Compile Include="Customers\UserProfile.aspx.designer.cs">
       <DependentUpon>UserProfile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Results.aspx.cs">
+      <DependentUpon>Results.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Results.aspx.designer.cs">
+      <DependentUpon>Results.aspx</DependentUpon>
     </Compile>
     <Compile Include="UserProfileWithMaster.aspx.cs">
       <DependentUpon>UserProfileWithMaster.aspx</DependentUpon>

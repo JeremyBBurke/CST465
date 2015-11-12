@@ -23,9 +23,9 @@
                 </Buttons>
             </UCON:MultipleChoiceQuestion>
             <br />
-            <SCON:ShortTextQuestion ID="uxShortText" runat="server" Text="Why are compilers so stupid?" />
+            <SCON:ShortTextQuestion ID="uxShortText" runat="server" QuestionText="Why are compilers so stupid?" />
             <br />
-            <SCON:TrueFalseQuestion ID="uxTF" runat="server" Text="Compilers are dumb T/F?" />
+            <SCON:TrueFalseQuestion ID="uxTF" runat="server" QuestionText="Compilers are dumb T/F?" />
             <br />
             <asp:Button ID="uxSubmit" Text="Save Answers" OnClick="uxSubmit_Click" runat="server" />
             <br />
