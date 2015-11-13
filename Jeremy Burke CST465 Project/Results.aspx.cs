@@ -15,8 +15,8 @@ namespace Jeremy_Burke_CST465_Project
             if (Session["QuestionList"] != null)
             {
                 List<QuestionAnswer> SavedQuestions = (List<QuestionAnswer>)Session["QuestionList"];
-                uxResults.DataSource = SavedQuestions;
-                uxResults.DataBind();
+                //uxResults.DataSource = SavedQuestions;
+                //uxResults.DataBind();
             }
         }
     }
