@@ -83,5 +83,7 @@ namespace Jeremy_Burke_CST465_Project.Code
             get { return m_ProfileImage; }
             set { m_ProfileImage = value; }
         }
+
+        public Guid UserID { get; set; }
     }
 }

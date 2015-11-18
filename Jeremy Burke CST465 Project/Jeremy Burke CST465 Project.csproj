@@ -161,6 +161,7 @@
     </Compile>
     <Compile Include="Code\QuestionAnswer.cs" />
     <Compile Include="Code\UserProfile.cs" />
+    <Compile Include="Code\UserProfileRepo.cs" />
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
