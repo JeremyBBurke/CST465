@@ -29,6 +29,11 @@ footer{
 .FileUpload{
     display:inline-block;
 }
+#NavMenu
+{
+    background-color:#C02424;
+    border-color:#FB7979;
+}
 main div{
     margin:auto;
     width:1004px;

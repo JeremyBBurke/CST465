@@ -18,6 +18,9 @@
         <asp:LoginStatus ID="LoginStatus" runat="server" CssClass="LoginControl" LogoutPageUrl="~/Customers/Login.aspx"/>
     </div>
     <nav>
+        <asp:SiteMapDataSource ID="ZFTSiteMap" StartingNodeUrl="~/Default.aspx" ShowStartingNode="false" runat="server" />
+        <asp:Menu ID="NavMenu" Orientation="Horizontal" DataSourceID="ZFTSiteMap" runat="server"></asp:Menu>
+        <asp:SiteMapPath PathSeparator=" -- " runat="server"></asp:SiteMapPath>
         <asp:ContentPlaceHolder ID="cphNav" runat="server">This is the navigation pane!</asp:ContentPlaceHolder>
     </nav>
 
