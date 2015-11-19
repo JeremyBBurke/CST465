@@ -19,7 +19,7 @@
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphMain" runat="server">
         <div>
-            <asp:MultiView ID="MultiView1" ActiveViewIndex="0" runat="server">
+            <asp:MultiView ID="MultiView1" ActiveViewIndex="1" runat="server">
                 <asp:View ID="View1" runat="server">
                     <h1>Profile Settings</h1>
                     <br />
@@ -129,6 +129,8 @@
 
                     <strong>Profile Image</strong>
                     <asp:Image ID="uxImage" runat="server" />
+                    <br />
+                    <asp:Button ID="uxEdit" Text="Edit Profile" OnClick="uxEdit_Click" runat="server" />
                     <br />
                 </asp:View>
             </asp:MultiView>

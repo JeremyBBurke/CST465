@@ -19,16 +19,19 @@ namespace Jeremy_Burke_CST465_Project.Code
             command.Parameters.Add(parameter1);
             command.Connection.Open();
             SqlDataReader reader = command.ExecuteReader();
-            Returnvalue.FirstName = (string)reader[1];
-            Returnvalue.LastName = (string)reader[2];
-            Returnvalue.Age = (string)reader[3];
-            Returnvalue.PhoneNumber = (string)reader[4];
-            Returnvalue.EmailAddress = (string)reader[5];
-            Returnvalue.StreetAddress = (string)reader[6];
-            Returnvalue.City = (string)reader[7];
-            Returnvalue.State = (string)reader[8];
-            Returnvalue.Zip = (string)reader[9];
-            Returnvalue.profileimage = (Byte[])reader[10];
+            if (reader.Read())
+            {
+                Returnvalue.FirstName = (string)reader[1];
+                Returnvalue.LastName = (string)reader[2];
+                Returnvalue.Age = (string)reader[3];
+                Returnvalue.PhoneNumber = (string)reader[4];
+                Returnvalue.EmailAddress = (string)reader[5];
+                Returnvalue.StreetAddress = (string)reader[6];
+                Returnvalue.City = (string)reader[7];
+                Returnvalue.State = (string)reader[8];
+                Returnvalue.Zip = (string)reader[9];
+                Returnvalue.profileimage = (Byte[])reader[10];
+            }
             command.Connection.Close();
             return Returnvalue;
         }

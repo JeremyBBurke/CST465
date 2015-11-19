@@ -14,10 +14,38 @@ namespace Jeremy_Burke_CST465_Project
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            UserProfileObject SavedProfile;
+            string base64String = null;
             if ( Session["ProfileData"] != null)
+            {    
+                SavedProfile = (UserProfileObject) Session["ProfileData"];
+                MultiView1.ActiveViewIndex = 1;
+                litFirstName.Text = SavedProfile.FirstName;
+                litLastName.Text = SavedProfile.LastName;
+                litAge.Text = SavedProfile.Age;
+                litPhoneNumber.Text = SavedProfile.PhoneNumber;
+                litEmailAddress.Text = SavedProfile.EmailAddress;
+                litConfirmEmail.Text = SavedProfile.ConfrimEmail;
+                litStreetAddress.Text = SavedProfile.StreetAddress;
+                litCity.Text = SavedProfile.City;
+                litState.Text = SavedProfile.State;
+                litZipCode.Text = SavedProfile.Zip;
+                using (MemoryStream m = new MemoryStream(SavedProfile.profileimage))
+                {
+                    byte[] imageBytes = m.ToArray();
+                    // Convert byte[] to Base64 String                    
+                    base64String = Convert.ToBase64String(imageBytes);
+                }
+                if (!string.IsNullOrEmpty(base64String))
+                {
+                    uxImage.ImageUrl = "data:image/jpeg;base64," + base64String;
+                }
+            }
+            else
             {
-                string base64String = null;
-                UserProfileObject SavedProfile = (UserProfileObject) Session["ProfileData"];
+                MembershipUser user = Membership.GetUser();
+                Guid userID = (Guid)user.ProviderUserKey;
+                SavedProfile = UserProfileRepo.GetUserProfile(userID);
                 MultiView1.ActiveViewIndex = 1;
                 litFirstName.Text = SavedProfile.FirstName;
                 litLastName.Text = SavedProfile.LastName;
@@ -79,6 +107,7 @@ namespace Jeremy_Burke_CST465_Project
                     myprofile.profileimage = buffer;
                 }
                 Session["ProfileData"] = myprofile;
+                UserProfileRepo.SaveUserProfile(myprofile);
                 Response.Redirect("UserProfile.aspx");
             }
         }
