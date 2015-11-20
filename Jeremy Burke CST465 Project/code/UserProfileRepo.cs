@@ -23,7 +23,7 @@ namespace Jeremy_Burke_CST465_Project.Code
             {
                 Returnvalue.FirstName = (string)reader[1];
                 Returnvalue.LastName = (string)reader[2];
-                Returnvalue.Age = (string)reader[3];
+                Returnvalue.Age = ((int)reader[3]).ToString();
                 Returnvalue.PhoneNumber = (string)reader[4];
                 Returnvalue.EmailAddress = (string)reader[5];
                 Returnvalue.StreetAddress = (string)reader[6];

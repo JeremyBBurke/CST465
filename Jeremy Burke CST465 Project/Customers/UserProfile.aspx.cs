@@ -16,10 +16,9 @@ namespace Jeremy_Burke_CST465_Project
         {
             UserProfileObject SavedProfile;
             string base64String = null;
-            if ( Session["ProfileData"] != null)
-            {    
-                SavedProfile = (UserProfileObject) Session["ProfileData"];
-                MultiView1.ActiveViewIndex = 1;
+            if (Session["ProfileData"] != null)
+            {
+                SavedProfile = (UserProfileObject)Session["ProfileData"];
                 litFirstName.Text = SavedProfile.FirstName;
                 litLastName.Text = SavedProfile.LastName;
                 litAge.Text = SavedProfile.Age;
@@ -46,7 +45,6 @@ namespace Jeremy_Burke_CST465_Project
                 MembershipUser user = Membership.GetUser();
                 Guid userID = (Guid)user.ProviderUserKey;
                 SavedProfile = UserProfileRepo.GetUserProfile(userID);
-                MultiView1.ActiveViewIndex = 1;
                 litFirstName.Text = SavedProfile.FirstName;
                 litLastName.Text = SavedProfile.LastName;
                 litAge.Text = SavedProfile.Age;
@@ -57,21 +55,24 @@ namespace Jeremy_Burke_CST465_Project
                 litCity.Text = SavedProfile.City;
                 litState.Text = SavedProfile.State;
                 litZipCode.Text = SavedProfile.Zip;
-                using (MemoryStream m = new MemoryStream(SavedProfile.profileimage))
+                if (SavedProfile.profileimage != null)
                 {
-                    byte[] imageBytes = m.ToArray();
-                    // Convert byte[] to Base64 String                    
-                    base64String = Convert.ToBase64String(imageBytes);
-                }
-                if (!string.IsNullOrEmpty(base64String))
-                {
-                    uxImage.ImageUrl = "data:image/jpeg;base64," + base64String;
+                    using (MemoryStream m = new MemoryStream(SavedProfile.profileimage))
+                    {
+                        byte[] imageBytes = m.ToArray();
+                        // Convert byte[] to Base64 String                    
+                        base64String = Convert.ToBase64String(imageBytes);
+                    }
+                    if (!string.IsNullOrEmpty(base64String))
+                    {
+                        uxImage.ImageUrl = "data:image/jpeg;base64," + base64String;
+                    }
                 }
             }
         }
         protected void validateFile(object sender, ServerValidateEventArgs e)
         {
-            if(uxImageUpload.HasFile)
+            if (uxImageUpload.HasFile)
             {
                 if (Path.GetExtension(uxImageUpload.FileName).ToLower() != ".jpg"
                     && Path.GetExtension(uxImageUpload.FileName).ToLower() != ".png"
@@ -89,7 +90,10 @@ namespace Jeremy_Burke_CST465_Project
         {
             if (Page.IsValid)
             {
+                MembershipUser user = Membership.GetUser();
+                Guid userID = (Guid)user.ProviderUserKey;
                 UserProfileObject myprofile = new UserProfileObject();
+                myprofile.UserID = userID;
                 myprofile.FirstName = uxFirstName.Text;
                 myprofile.LastName = uxLastName.Text;
                 myprofile.Age = uxAge.Text;
@@ -98,7 +102,7 @@ namespace Jeremy_Burke_CST465_Project
                 myprofile.ConfrimEmail = uxConfirmEmail.Text;
                 myprofile.StreetAddress = uxStreetAddress.Text;
                 myprofile.City = uxCity.Text;
-                myprofile.State = uxState.Text;
+                myprofile.State = uxState.SelectedValue;
                 myprofile.Zip = uxZipcode.Text;
                 if (uxImageUpload.HasFile)
                 {
@@ -108,8 +112,25 @@ namespace Jeremy_Burke_CST465_Project
                 }
                 Session["ProfileData"] = myprofile;
                 UserProfileRepo.SaveUserProfile(myprofile);
-                Response.Redirect("UserProfile.aspx");
+                MultiView1.ActiveViewIndex = 1;
             }
+        }
+        protected void uxEdit_Click(object sender, EventArgs e)
+        {
+            UserProfileObject SavedProfile;
+            MembershipUser user = Membership.GetUser();
+            Guid userID = (Guid)user.ProviderUserKey;
+            SavedProfile = UserProfileRepo.GetUserProfile(userID);
+            uxFirstName.Text = SavedProfile.FirstName;
+            uxLastName.Text = SavedProfile.LastName;
+            uxAge.Text = SavedProfile.Age;
+            uxPhonenumber.Text = SavedProfile.PhoneNumber;
+            uxEmailAddress.Text = SavedProfile.EmailAddress;
+            uxStreetAddress.Text = SavedProfile.StreetAddress;
+            uxCity.Text = SavedProfile.City;
+            //uxState.SelectedValue = SavedProfile.State;
+            uxZipcode.Text = SavedProfile.Zip;
+            MultiView1.ActiveViewIndex = 0;
         }
     }
 }
