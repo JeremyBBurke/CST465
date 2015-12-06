@@ -36,11 +36,28 @@ footer{
 }
 main div{
     margin:auto;
-    width:1004px;
+    width:100%;
+    max-width:1004px;
 }
 .LoginControl{
     position:absolute;
     top: 0;
     right:0;
+}
+.col{  
+    width: 100%;  
+    box-sizing: border-box;  
+    padding:10px;
+}
+.contact{  
+    background-color:#1D991D;
+}
+@media (min-width: 768px){
+    .col_25{
+        width:25%
+    }
+    .col_75{
+        width:75%
+    }
 }
 /* http://paletton.com/#uid=51q1q0kq1o2gAvzlsrkt3jF-sex */

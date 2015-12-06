@@ -6,9 +6,11 @@
 <head runat="server">
     <title></title>
     <link rel="stylesheet" type="text/css" href="~/css/DefaultStyles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <asp:ContentPlaceHolder ID="cphHead" runat="server"><title>This is a Page!</title></asp:ContentPlaceHolder>
 </head>
 <body>
+    <asp:ScriptManager ID="masterscriptmanager" runat="server"></asp:ScriptManager>
     <form id="masterform" runat="server">
     <header>
         <asp:ContentPlaceHolder ID="cphHeader" runat="server">This is the Header!</asp:ContentPlaceHolder>

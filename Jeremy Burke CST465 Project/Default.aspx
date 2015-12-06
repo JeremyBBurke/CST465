@@ -6,9 +6,9 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphHeader" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphNav" runat="server">
-    <UCON:FeaturedProducts runat="server"></UCON:FeaturedProducts>
 </asp:Content>
 <asp:Content ID="Content4" ContentPlaceHolderID="cphMain" runat="server">
+    <UCON:FeaturedProducts runat="server"></UCON:FeaturedProducts>
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="cphFooter" runat="server">
 </asp:Content>

@@ -22,13 +22,13 @@ namespace Jeremy_Burke_CST465_Project.App_Master {
         protected global::System.Web.UI.WebControls.ContentPlaceHolder cphHead;
         
         /// <summary>
-        /// uxScriptManagerProxy control.
+        /// masterscriptmanager control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.ScriptManagerProxy uxScriptManagerProxy;
+        protected global::System.Web.UI.ScriptManager masterscriptmanager;
         
         /// <summary>
         /// masterform control.

@@ -6,6 +6,8 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="cphHeader" runat="server">
 </asp:Content>
 <asp:Content ID="Content3" ContentPlaceHolderID="cphNav" runat="server">
+</asp:Content>
+<asp:Content ID="Content4" ContentPlaceHolderID="cphMain" runat="server">
     <UCON:FeaturedProducts runat="server"></UCON:FeaturedProducts>
     <h2>All Products</h2>
     <asp:SqlDataSource ID="dsallproducts" ConnectionString="<%$ ConnectionStrings:DB_CST465 %>" SelectCommandType="StoredProcedure" SelectCommand="dbo.Products_GetList" runat="server" />
@@ -18,8 +20,6 @@
             </div>
         </ItemTemplate>
     </asp:Repeater>
-</asp:Content>
-<asp:Content ID="Content4" ContentPlaceHolderID="cphMain" runat="server">
 </asp:Content>
 <asp:Content ID="Content5" ContentPlaceHolderID="cphFooter" runat="server">
 </asp:Content>
