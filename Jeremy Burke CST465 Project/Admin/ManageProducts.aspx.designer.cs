@@ -7,18 +7,18 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Jeremy_Burke_CST465_Project {
+namespace Jeremy_Burke_CST465_Project.Admin {
     
     
-    public partial class Products {
+    public partial class ManageProducts {
         
         /// <summary>
-        /// dsallproducts control.
+        /// dsProducts control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource dsallproducts;
+        protected global::System.Web.UI.WebControls.SqlDataSource dsProducts;
     }
 }
